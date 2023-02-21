@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgb(177, 227, 177), rgb(190, 231, 190));
+    color: green;
+
+}
+
+a {
+    color: green;
+}

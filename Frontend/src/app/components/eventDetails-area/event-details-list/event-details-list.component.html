@@ -1,0 +1,38 @@
+<div class="box">
+    
+    <label>Select Event: </label>
+    <select (change)="display($event)">
+        <option selected disabled>Select Event</option>
+        <option *ngFor="let e of event" [value]="e._id">{{e.event}}</option>
+    </select>
+    <br><br>
+    <br><br>
+
+    <table border="1" >
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Date</th>
+                <th>event</th>
+                <th>Address</th>
+                <th>How many people is it for?</th>
+                <th>done?</th>
+                <th>❌</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of eventDetails">
+                <td>{{e.description}}</td>
+                <td>{{e.date}}</td>
+                <td>{{e.region.event}}</td>
+                <td>{{e.address}}</td>
+                <td>{{e.people}}</td>
+                <td>{{e.done}}</td>
+                <td>
+                    <button (click)="deleteEvent(e.eventId)">❌</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
